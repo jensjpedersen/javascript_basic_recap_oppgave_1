@@ -112,6 +112,30 @@ Console log the function a few times to show that it's working. */
 
 //! Write code here
 
+function yourFunction(name, hour) {
+
+    console.assert(typeof(hour) === "number"); // check if number
+
+    if ( 0 <= hour && 6 > hour ) {
+        console.log(`Good night ${name}`);
+    } else if ( 6 <= hour && 12 > hour ) {
+        console.log(`Good morning ${name}`);
+    } else if ( 12 <= hour && 18 > hour ) {
+        console.log(`Good day ${name}`);
+    } else if ( 18 <= hour && 24 >= hour ) {
+        console.log(`Good evening ${name}`);
+    } else if ( hour > 24 ){
+        console.log("Invalid time"); 
+    } else {
+        // negativ numbers 
+        console.log("Invalid time"); 
+    }
+}
+
+for (let i = -1; i <= 25; i++) {
+    yourFunction('jens', i)
+}
+
 
 //* Assignment 9:
 /* Write a function that takes in 2 numbers as parameters.
