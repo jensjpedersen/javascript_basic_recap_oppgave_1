@@ -64,8 +64,9 @@ console.log(recurseRandomString(8))
 
 //* Assignment 5:
 /* Make a function that uses a parameter to check if a number is odd or even */
-
-//! Write code here
+let printOddOrEven = number => ( number % 2 === 0 ) ? console.log(`${number} is even`) : console.log(`${number} is odd`)
+printOddOrEven(5)
+printOddOrEven(6)
 
 //* Assigment 6:
 /* Make a variable called userTitle and set the content equal to "Mr." if userMale is true,
