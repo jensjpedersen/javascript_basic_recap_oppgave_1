@@ -71,13 +71,24 @@ printOddOrEven(6)
 //* Assigment 6:
 /* Make a variable called userTitle and set the content equal to "Mr." if userMale is true,
 or to "Mrs." if userMale is false. Use the TERNARY conditional to do this:
-
 const variable = statement ? "this if true" : "this if not true"
 
 Try changing userMale to both true and false and console.log your new variable,
 to see that your conditional is working. */
 
-//! Write code here
+
+function printTitle(userMale) {
+    let userTitle; 
+    ( userMale === true ) ? userTitle="Mr." : userTitle="Mrs."
+    console.log(`userMale = ${userMale} and userTitle = ${userTitle}`);
+}
+
+let userMale = true; 
+printTitle(userMale)
+
+userMale = false; 
+printTitle(userMale)
+
 
 //* Assigment 8:
 /*
