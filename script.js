@@ -127,7 +127,7 @@ function yourFunction(name, hour) {
     } else if ( hour > 24 ){
         console.log("Invalid time"); 
     } else {
-        // negativ numbers 
+        // negative numbers 
         console.log("Invalid time"); 
     }
 }
@@ -147,7 +147,9 @@ Use arrow function syntax.
 
 Example: your function receives 13 and 24, it should return the sum of 24/13 */
 
-//! Write code here
+let devideByMin = (num1, num2) => Math.max(num1, num2) / Math.min(num1, num2)
+console.log(devideByMin(5, 10))
+
 
 
 //* Assignment 10:
@@ -156,7 +158,40 @@ Random Number Generator, Methods, and Arrays with Objects */
 
 //! Write code here
 
+
+personArray = [
+    { name: 'Jens', age: 28 }, 
+    { name: 'Ole', age: 28}
+]
+
+function getRandomPersonInfo() {
+
+    let validEntries = ['name', 'age', 'reverse']; 
+    let randomEntryIndex = Math.floor(Math.random() * validEntries.length); 
+    let entry = validEntries[randomEntryIndex]; 
+    let randomPersonIndex = Math.floor(Math.random() * personArray.length); 
+    let person = personArray[randomPersonIndex]; 
+
+    switch (entry) {
+        case 'name':
+            console.log(`${person.name}'s name is ${person.name}`);
+            break
+        case 'age':
+            console.log(`${person.name}'s age is ${person.age}`);
+            break
+        case 'reverse': 
+            console.log(`${person.name}'s in reverse is ${person.name.split("").reverse().join("").toUpperCase()}`);
+            break
+        default: 
+            console.log('Not a valid entnry'); 
+    }
+}
+
+getRandomPersonInfo()
+
 //* BAONUS assignment:
+//
+
 /*
 EXTRA CHALLENGE
 
