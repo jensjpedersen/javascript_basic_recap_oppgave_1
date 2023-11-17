@@ -217,8 +217,15 @@ Use arrow function syntax.
 Console log the function call with a few different datatypes to show that it's working
 */
 
-//! Write code here
+let coolMaker = (param) => 
+    typeof param === 'string' ? `😎${param}😎`
+        : typeof param === 'number' ? `😎${param * 2}😎`
+        : typeof param === 'boolean' ? ( param ? '😎Yeah😎' : '😎Chill😎' )
+        : "😎Primitive values only😎"
 
-
+console.log(coolMaker('hei'))
+console.log(coolMaker(654.6))
+console.log(coolMaker(true))
+console.log(coolMaker(false))
 
 
